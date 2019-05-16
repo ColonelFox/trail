@@ -1,0 +1,26 @@
+* {
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;    
+    margin: 20px;
+    padding: 10px;
+}
+
+body {
+    background-color: rgb(231, 183, 192);
+}
+
+h1 {
+    font-size: 80px;
+}
+
+#title {
+}
+
+#secret{
+    visibility: hidden;
+}
+
+button {
+    padding: 30px;
+    background-color: rgb(233, 121, 143);
+}
