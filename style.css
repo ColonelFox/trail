@@ -31,3 +31,33 @@ iframe {
     border-radius: 30px;
     background-color: black;
 }
+
+#step1 {
+    top: 16000px;
+    width: 400px;
+}
+
+#step2 {
+    top: 14000px;
+    width: 400px;
+}
+
+.step {
+    visibility: hidden;
+    position: absolute;
+    border-width: 0px 20px;
+    border-color: rgb(233, 121, 143);
+    border-style: solid;
+    border-radius: 100px;
+    padding: 30px;
+}
+
+input {
+    width: 300px;
+}
+
+
+
+#busline {
+
+}
