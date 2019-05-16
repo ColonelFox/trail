@@ -24,3 +24,10 @@ button {
     padding: 30px;
     background-color: rgb(233, 121, 143);
 }
+
+iframe {
+    border-width: 10px;
+    border-color: black;
+    border-radius: 30px;
+    background-color: black;
+}
