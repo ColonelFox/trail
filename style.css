@@ -39,15 +39,15 @@ iframe {
 }
 
 #step2 {
-    top: 18000px;
+    top: 18150px;
 }
 
 #step3 {
-    top: 16900px;
+    top: 17150px;
 }
 
 #step4 {
-    top: 16100px;
+    top: 16050px;
 }
 
 #step5 {
@@ -160,5 +160,25 @@ input {
 
 .small {
     font-size: 75%;
-   
+}
+
+.big {
+    font-size: 275%;
+}
+
+
+#help1 {
+    position: absolute;
+    visibility: hidden;
+    top: 19450px;
+    left: 335px;
+    color: gray;
+}
+
+#help2 {
+    position: absolute;
+    top: 18830px;
+    color: gray;
+    left: 240px;
+    visibility: hidden;
 }

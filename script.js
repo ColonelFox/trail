@@ -65,24 +65,18 @@ function btnStepClick(event) {
     let btn_id = event.toElement.id;
     btn_id = btn_id.substring(5);
     let num = 0;
-    try {
-        num = parseInt(btn_id);
-        if(Number.isNaN(num)) {
-            throw Exception;
-        }
-        nextState(num);
-        switch(num) {
-            case 1:
-            window.scrollBy(0, 11500);
-            break;
-        }
+    
+    num = parseInt(btn_id);
+    if(Number.isNaN(num)) {
+        throw Exception;
     }
-    catch {
-        if (btn_id == "end2") {
-            let el = window.document.getElementById(btn_id);
-            el.style.visibility = "visible";
-        }
+    nextState(num);
+    switch(num) {
+        case 1:
+        window.scrollBy(0, 17500);
+        break;
     }
+    
 }
 
 
@@ -97,7 +91,16 @@ function btnEndClick(event) {
 
 function unhide(id) {
     let el = window.document.getElementById(id);
-    el.style.visibility = "visible";
+    if(el != undefined) {
+        el.style.visibility = "visible";
+    }
+}
+
+function hide(id) {
+    let el = window.document.getElementById(id);
+    if(el != undefined) {
+        el.style.visibility = "hidden";
+    }
 }
 
 function init() {
@@ -122,13 +125,30 @@ function nextState(nextstate) {
 
 
 function updateVisibility() {
+
     for(i = 1; i <= state; i++) {
-        unhide("step" + i);
+        if((i > 10) && (state == 99)) {
+            hide("step" + i);
+        }
+        else {
+            unhide("step" + i);
+        }
     }
     
     if(state > 0) {
         unhide("giraffe");
         unhide("gras");
+        unhide("help1");
+    }
+    if(state > 1) {
+        unhide("help2");
+    }
+    if(state == 99) {
+        unhide("end2");
+    }
+    else {
+        let el = window.document.getElementById("end2");
+        el.style.visibility = "hidden";
     }
 }
 
