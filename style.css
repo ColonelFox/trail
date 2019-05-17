@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(231, 183, 192);
+    background-color: rgb(231, 193, 183);
 }
 
 h1 {
@@ -22,8 +22,9 @@ h1 {
 
 button {
     padding: 30px;
-    background-color: rgb(233, 121, 143);
-    border-radius: 50px;
+    background-color: rgb(233, 138, 121);
+    border-radius: 40px;
+    border-width: 0px;
 }
 
 iframe {
@@ -34,35 +35,67 @@ iframe {
 }
 
 #step1 {
-    top: 13000px;
+    top: 19000px;
 }
 
 #step2 {
-    top: 12200px;
+    top: 18000px;
 }
 
 #step3 {
-    top: 11300px;
+    top: 16900px;
 }
 
 #step4 {
-    top: 10600px;
+    top: 16100px;
 }
 
 #step5 {
-    top: 9400px;
+    top: 14800px;
 }
 
 #step6 {
-    top: 8200px;
+    top: 13600px;
 }
 
 #step7 {
-    top: 7200px;
+    top: 12000px;
 }
 
 #step8 {
-    top: 6000px;
+    top: 10600px;
+}
+
+#step9 {
+    top: 9300px;
+}
+
+#step10 {
+    top: 8300px;
+}
+
+#step11 {
+    top: 7100px;
+}
+
+#step12 {
+    top: 6150px;
+}
+
+#step13 {
+    top: 5000px;
+}
+
+#step14 {
+    top: 4100px;
+}
+
+#step15 {
+    top: 2800px;
+}
+
+#end2 {
+    top: 6650px;
 }
 
 .step {
@@ -106,16 +139,21 @@ input {
 
 #giraffe {
     position: absolute;
-    top: 0px;
+    top: 2000px;
+    z-index: 0;
 }
 
-#busline {
-
+#gras {
+    position: absolute;
+    top: 19750px;
+    z-index: 0;
+    width: 1100px;
+    left: -100px;
 }
 
 #reset {
     position: absolute;
-    top: 15000px;
+    top: 20500px;
     background-color: gray;
     width: 700px;
 }

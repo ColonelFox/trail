@@ -24,6 +24,7 @@
     
     
     <image id="giraffe" src="gi_smaller.png" style="visibility: hidden"></image>
+    <image id="gras" src="gras.png" style="visibility: hidden"></image>
 
 
 
@@ -54,23 +55,70 @@
     </div>
 
     <div id="step6" class="step gi2">
-        <p>Ja geeenaaau!!! Es het usgseh wie dasdada: 1</p>
+        <p>Ja geenaau!!! Es het usgseh wie dasdada: 1</p>
         <p>Und es isch vo hie Richtig Spiez, bzw. Gwatt Deltapark gsi, woni dr Dave gseh ha</p>
         <button id="btn_a7" onclick="btnStepClick(event)">Und Bushaltistell?</button>
     </div>
 
     <div id="step7" class="step gi">
         <p>Hesch Glück, dassi Buechstabe läse cha =) Es isch d'Haltistell Gwatt, Moos!</p>
-        <button id="btn_a8" onclick="btnStepClick(event)">Super, ig machemi ufe Wäg!</button>
+        <p>Ouu, gseh grad wie dr Chalbermatter d'Juwele versteckt het... Dr Dave ischem uf dr Spur! Schnäll ihm nach!</p>
+        <button id="btn_a8" onclick="btnStepClick(event)">Oja, ig machemi ufe Wäg!</button>
     </div>
 
     <div id="step8" class="step instr">
-        <p>Your task:</br>Take the bus nr. 1 in direction of "Gwatt, Deltapark" / "Spiez". And exit on the stop "Gwatt, Moos". Press the button, when you're there...</p>
+        <p>[Instructor] Your task:</br>Take the bus nr. 1 in direction of "Gwatt, Deltapark" / "Spiez". And exit on the stop "Gwatt, Moos". Press the button, when you're there...</p>
         <button id="btn_a9" onclick="btnStepClick(event)">I'm here! Now what?</button>
     </div>
 
 
+    <div id="step9" class="step gi">
+        <p>Hey Debbie! Ig bis wieder, dr Gigi...</p>
+        <p>Ig cha di vo witem gseh! Bisch genau richtig! Lueg mal ume! Gsesch d'Bäckerei Linder?</p>
+        <button id="btn_a10" onclick="btnStepClick(event)">Ja</button>
+        <button id="btn_no2" onclick="btnMsgClick(event)">Neei</button>
+    </div>
 
+
+    <div id="step10" class="step gi2">
+        <p>Sehr guet... de gang mal vor die Bäckerei... gsesch es Bänkli vordran?</p>
+        <button id="btn_a11" onclick="btnStepClick(event)">Ja</button>
+        <button id="btn_aend2" onclick="btnStepClick(event)">Nöö</button>
+    </div>
+
+    <div id="step11" class="step gi">
+        <p>Supi... lueg mal ungerem Bänkli. Dert söttisch es Briefli vom Dave finde...</p>
+        <button id="btn_a12" onclick="btnStepClick(event)">Gfunde!</button>
+        <button id="btn_no3" onclick="btnMsgClick(event)">Nooo! Can't find it ;(</button>
+    </div>
+
+    <div id="end2" class="step gi">
+        <p>Ok, aja es het gar kes Bänkli... gseh nümme so guet. Iz muesch imfal am Dave schnäll ä Whatsapp-Msg mache, und frage wasde muesch mache...</p>
+        <p>Und ig muess ize witers zie... hoffe du finsch ihn no!</p>
+        <button id="btn_end2" onclick="btnEndClick(event)">Bye Bye</button>
+    </div>
+
+    <div id="step12" class="step gi2">
+        <p>Hesch scho drigluegt? Was hets drin?</p>
+        <button id="btn_a13" onclick="btnStepClick(event)">Es Plänli</button>
+        <button id="btn_wrong" onclick="btnMsgClick(event)">Es Klavier</button>
+    </div> 
+
+    <div id="step13" class="step gi">
+        <p>Ah super! Vilech isch das d'Spur zum Chalbermatter sine klaute Juwele?</p>
+        <p> Wünschdr uf jede Fall ganz viu Erfolg bim Charte-Läse!</p>
+        <button id="btn_a14" onclick="btnStepClick(event)">Thanks =)</button>
+    </div>
+
+    <div id="step14" class="step gi2">
+        <p>Ig muess ize leider witers zie... wirde nöimed angers brucht. Hoffe du finsch dr Dave wieder!</p>
+        <button id="btn_a15" onclick="btnStepClick(event)">Bye Bye</button>
+    </div>
+
+    <div id="step15" class="step instr">
+        <p>[Instructor] There we go! The giraffe is gone... no help from this side anymore. But I think you will be fine! Just follow the map. Can you find the treasure?</p>
+        <button id="btn_end1" onclick="btnEndClick(event)">Off we go!</button>
+    </div>
 
     <div>
         <button id="reset" onclick="btnReset()">Reset</br><span class="small">Only press in emergency!</span></button>
