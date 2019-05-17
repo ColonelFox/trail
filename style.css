@@ -35,11 +35,34 @@ iframe {
 
 #step1 {
     top: 13000px;
-    
 }
 
 #step2 {
-    top: 11500px;
+    top: 12200px;
+}
+
+#step3 {
+    top: 11300px;
+}
+
+#step4 {
+    top: 10600px;
+}
+
+#step5 {
+    top: 9400px;
+}
+
+#step6 {
+    top: 8200px;
+}
+
+#step7 {
+    top: 7200px;
+}
+
+#step8 {
+    top: 6000px;
 }
 
 .step {
@@ -57,8 +80,24 @@ iframe {
     border-color: #FDC518;
 }
 
+.step.gi2 {
+    border-color: rgb(207, 141, 34);
+}
+
+.step.instr {
+    border-color: gray;
+}
+
 .gi button {
     background-color: rgb(207, 141, 34);
+}
+
+.gi2 button {
+    background-color: #FDC518;
+}
+
+.instr button {
+    background-color: gray;
 }
 
 input {

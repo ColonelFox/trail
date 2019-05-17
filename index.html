@@ -25,16 +25,53 @@
     
     <image id="giraffe" src="gi_smaller.png" style="visibility: hidden"></image>
 
+
+
     <div id="step1" class="step gi">
-        <p>Weisch weli Buslinie näh?</p>
-        <input id="check2"></input>
-        <button id="btn_check2" onclick="btnCheckClick(event)">Check</button>
+        <p>Hoooii Debbie! Ig bi dr Gigi, dr Giraff... ä guete Kolleg vom Hugo.</p>
+        <button id="btn_a2" onclick="btnStepClick(event)">Hoi Gigi</button>
     </div>
-    <div id="step2" class="step">
-        <p>Yay!!! Richtiiiig! Bus-Linie 1! U zwar in Richtig Gwatt, Deltapark / Spiez. D'Haltistell wode use muesch heisst "Gwatt, Moos" </p>
-        <p>Klick hie, wede derte bisch:</p>
-        <button onclick="btnCheckBuslineClick()">I bi hie! (Gwatt, Moos)</button>
+
+    <div id="step2" class="step gi2">
+        <p>Dr Hugo hetmer gseit, ig söui dir häufe ihn und dr Dave z'finge?</p>
+        <button id="btn_a3" onclick="btnStepClick(event)">Ja genau!</button>
     </div>
+
+    <div id="step3" class="step gi">
+        <p>Ok... </br>Dank mim lange Hals, chani dir super hälfe! ;)</br> Ig luege grad mal...</p>
+        <button id="btn_a4" onclick="btnStepClick(event)">Und? Gsesch öbbis?</button>
+    </div>
+
+    <div id="step4" class="step gi2">
+        <p>Yess!! Iz hani de Dave grad usmene Bus ustiige gseh... </p>
+        <button id="btn_a5" onclick="btnStepClick(event)">Juhuu =) Wo? Wele Bus?</button>
+    </div>
+
+    <div id="step5" class="step gi">
+        <p>Bus-Nr. weisi nid, ig cha leider ke Zahle läse ;( </br> Aber s'isch es Zeiche wo zimli dünn isch... Was meinsch, was chönnts fürne Bus sii?</p>
+        <input id="check6" placeholder="Zahl?"></input>
+        <button id="btn_check6" onclick="btnCheckClick(event)">Check</button>
+    </div>
+
+    <div id="step6" class="step gi2">
+        <p>Ja geeenaaau!!! Es het usgseh wie dasdada: 1</p>
+        <p>Und es isch vo hie Richtig Spiez, bzw. Gwatt Deltapark gsi, woni dr Dave gseh ha</p>
+        <button id="btn_a7" onclick="btnStepClick(event)">Und Bushaltistell?</button>
+    </div>
+
+    <div id="step7" class="step gi">
+        <p>Hesch Glück, dassi Buechstabe läse cha =) Es isch d'Haltistell Gwatt, Moos!</p>
+        <button id="btn_a8" onclick="btnStepClick(event)">Super, ig machemi ufe Wäg!</button>
+    </div>
+
+    <div id="step8" class="step instr">
+        <p>Your task:</br>Take the bus nr. 1 in direction of "Gwatt, Deltapark" / "Spiez". And exit on the stop "Gwatt, Moos". Press the button, when you're there...</p>
+        <button id="btn_a9" onclick="btnStepClick(event)">I'm here! Now what?</button>
+    </div>
+
+
+
+
     <div>
         <button id="reset" onclick="btnReset()">Reset</br><span class="small">Only press in emergency!</span></button>
     </div>

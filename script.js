@@ -5,11 +5,11 @@ var msgs = {
 };
 
 var checks = {
-    "check1" : "1"
+    "check6" : "1"
 };
 
 var checkmsgs = {
-    "check2" : 
+    "check6" : 
     { 
         0 : "Leider nein... 1. Hiiwiis: Es isch ä Zahl...",
         1 : "Immer noni ;) 2. Hiiwiis: Es isch ä Zahl zwüsche 1 und 10",
@@ -63,7 +63,7 @@ function btnStepClick(event) {
 
     switch(num) {
         case 1:
-        window.scrollBy(0, 11000);
+        window.scrollBy(0, 11500);
         break;
     }
 }
