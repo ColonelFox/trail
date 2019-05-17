@@ -23,6 +23,7 @@ h1 {
 button {
     padding: 30px;
     background-color: rgb(233, 121, 143);
+    border-radius: 50px;
 }
 
 iframe {
@@ -33,13 +34,12 @@ iframe {
 }
 
 #step1 {
-    top: 16000px;
-    width: 400px;
+    top: 13000px;
+    
 }
 
 #step2 {
-    top: 14000px;
-    width: 400px;
+    top: 11500px;
 }
 
 .step {
@@ -50,14 +50,38 @@ iframe {
     border-style: solid;
     border-radius: 100px;
     padding: 30px;
+    width: 400px;
+}
+
+.step.gi {
+    border-color: #FDC518;
+}
+
+.gi button {
+    background-color: rgb(207, 141, 34);
 }
 
 input {
     width: 300px;
 }
 
-
+#giraffe {
+    position: absolute;
+    top: 0px;
+}
 
 #busline {
 
+}
+
+#reset {
+    position: absolute;
+    top: 15000px;
+    background-color: gray;
+    width: 700px;
+}
+
+.small {
+    font-size: 75%;
+   
 }

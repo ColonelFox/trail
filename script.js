@@ -1,83 +1,114 @@
-
-
-
+var state = 0;
 var failCtr = 0;
+var msgs = {
+    "no1" : "Oooch... vilech luegsch nomal ds Video, u atmisch töif düre... If that doesn't help, maybe call me? But only if you're really really really desperate ;)"
+};
 
-function btnReadyClick() {
-    unhide("giraffe");
-    unhide("step1");
-    window.scrollBy(0, 100000);
+var checks = {
+    "check1" : "1"
+};
+
+var checkmsgs = {
+    "check2" : 
+    { 
+        0 : "Leider nein... 1. Hiiwiis: Es isch ä Zahl...",
+        1 : "Immer noni ;) 2. Hiiwiis: Es isch ä Zahl zwüsche 1 und 10",
+        2 : "Hmmm, nope... 3. Hiiwiis: Es isch en ungeradi Zahl, chliner als 5...",
+        99 : "Schad... het äue öbbis nid ganz klappet... darfsch glich witers ;)"
+    }
+};
+
+function btnMsgClick(event) {
+    let btn_id = event.toElement.id;
+    let msgid = btn_id.substring(4);
+
+    if(msgid in msgs) {
+        alert(msgs[msgid]);
+    }
 }
 
-function btnNotReadyClick() {
-    alert("Oooch... vilech luegsch nomal ds Video, u atmisch töif düre... If that doesn't help, maybe call me? But only if you're really really really desperate ;)");
-}
+function btnCheckClick(event) {
+    let btn_id = event.toElement.id;
+    let checkid = btn_id.substring(4);
 
-function btnCheckBuslineClick() {
+    let input = window.document.getElementById(checkid);
+
+    let text = input.value;
     
-    let phrase = window.document.getElementById("busline");
-    let text = phrase.value;
-    console.log(text);
-
-    if(text == "1") {
-        unhide("step2");
-        failCtr = 0;
+    if(text == checks[checkid]) {
+        let step_id = checkid.substring(5);
+        step_id = parseInt(step_id);
+        nextState(step_id);
     }
     else {
-        if(failCtr == 0) {
-            alert("Leider nein... 1. Hiiwiis: Es isch ä Zahl...");
-            failCtr++;
-        }
-        else if(failCtr == 1) {
-            alert("Immer noni ;) 2. Hiiwiis: Es isch ä Zahl zwüsche 1 und 10");
-            failCtr++;
-        }
-        else if(failCtr == 2) {
-            alert("Hmmm, nope... 3. Hiiwiis: Es isch en ungeradi Zahl, chliner als 5...");
-            failCtr++;
+        if(failCtr in checkmsgs[checkid]) {
+            alert(checkmsgs[checkid][failCtr++]);
         }
         else {
-            alert("Schad... het äue öbbis nid ganz klappet... darfsch glich witers ;)");
-            unhide("step2");
-            failCtr = 0;
+            alert(checkmsgs[checkid][99]);
+            let step_id = checkid.substring(5);
+            step_id = parseInt(step_id);
+            nextState(step_id);
         }
     }
 }
 
 
-function btnCheckClick() {
-    
-    let phrase = window.document.getElementById("keyphrase");
-    let text = phrase.value;
-    console.log(text);
+function btnStepClick(event) {
+    let btn_id = event.toElement.id;
+    btn_id = btn_id.substring(5);
+    let num = parseInt(btn_id);
+    nextState(num);
 
-    if(text == "hallo") {
-        unhideSecret();
-    }
-    else {
-        if(failCtr == 0) {
-            alert("Leider nein... Hinweis 1!");
-        }
-        else if(failCtr == 1) {
-            alert("Leider nein... Hinweis 2!");
-        }
-        else if(failCtr == 2) {
-            alert("Leider nein... Hinweis 3!");
-        }
-        else {
-            alert("Leider auch falsch... darfsch glich witers ;)");
-            unhideSecret();
-        }
-        failCtr++;
+
+    switch(num) {
+        case 1:
+        window.scrollBy(0, 11000);
+        break;
     }
 }
 
-function unhideSecret() {
-    let secret = window.document.getElementById("secret");
-    secret.style.visibility = "visible";
-}
+
+
 
 function unhide(id) {
     let el = window.document.getElementById(id);
     el.style.visibility = "visible";
+}
+
+function init() {
+
+    let localstate = localStorage.getItem("state");
+
+    if(localstate) {
+        console.log("State: " + localstate);
+        state = localstate;
+    }
+
+    updateVisibility();
+}
+
+function nextState(nextstate) {
+    state = nextstate;
+    localStorage.setItem("state", state);
+    updateVisibility();
+    failCtr = 0;
+    console.log("New state: " + state);
+}
+
+
+function updateVisibility() {
+    for(i = 1; i <= state; i++) {
+        unhide("step" + i);
+    }
+    
+    if(state > 0) {
+        unhide("giraffe");
+    }
+}
+
+function btnReset() {
+    nextState(0);
+    window.scrollBy(0, -100000);
+    location.reload();
 }
